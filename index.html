@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Company!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <h1>Developed by Zeekerss</h1>
+            <nav>
+                <ul id="menu-list">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#trailer">Trailer</a></li>
+                    <li><a href="#game-info">Game Info</a></li>
+                    <li><a id="buy-menu" href="https://store.steampowered.com/app/1966720/Lethal_Company/">Buy Now</a></li>
+                </ul>
+                <img id="menu" src="/Images/hamburger-menu.png" alt="" onclick="toggle_menu()">
+            </nav>
+        </header>
+
+        <main>
+            <div class="title">
+                <img class="logo" src="/Images/game_logo.jpg" alt="" onclick="playIntro()">
+                <audio id="introMusic" loop>
+                    <source src="/Audio/lobbymusic.mp3" type="audio/mp3">
+                </audio>
+                <p>Welcome to the Company!</p>
+
+                <a id="buy" href="https://store.steampowered.com/app/1966720/Lethal_Company/"> --> Buy Now <-- </a>
+            </div>
+
+            <div id="about">
+                <p>"Get ready for an adrenaline-pumping experience with 'Lethal Company'! This early access co-op survival horror game by indie developer Zeekerss, thrusts players into a retrofuturistic post-apocalyptic universe. As employees of the mysterious corporation known as the "The Company," you'll navigate through heart-pounding challenges in order to survive!"</p>
+            </div>
+
+            <div id="trailer">
+                <iframe id="video" width="640" height="360" src="https://www.youtube.com/embed/m5RB0Ej1mFg" frameborder="0" allowfullscreen></iframe>
+
+                <a href="">Watch Trailer</a>
+            </div>
+
+            <div id="game-info">
+                <a href="/Moons/moons.html">
+                    <div class="tab moons"><p>MOONS</p></div>
+                </a>
+                <a href="/Bestiary/bestiary.html">
+                    <div class="tab bestiary">BESTIARY</div>
+                </a>
+                <a href="https://lethal-company.fandom.com/wiki/Lore">
+                    <div class="tab lore">LORE</div>
+                </a>
+                <a href="https://www.youtube.com/results?search_query=lethal+company+gameplay">
+                    <div class="tab gameplay">GAMEPLAY</div>
+                </a>
+            </div>
+        </main>
+
+        <footer>&copy; Zeekerss</footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

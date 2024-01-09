@@ -1,0 +1,331 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "IBM 3270", Arial, Helvetica, sans-serif;
+  color: #FFFFFF;
+  cursor: default;
+}
+
+.container {
+  background-color: #000000;
+  overflow: hidden;
+}
+
+header {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2% 5%;
+  height: 165px;
+}
+header #menu {
+  height: 30px;
+  cursor: pointer;
+  display: none;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav ul li {
+  margin-top: -100px;
+  display: inline-block;
+}
+header nav ul li a {
+  text-decoration: none;
+  font-size: 26px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+header nav ul li a:hover {
+  font-weight: bold;
+}
+header nav #buy-menu {
+  font-weight: bold;
+}
+header nav #buy-menu:hover {
+  color: #ce2029;
+}
+
+main {
+  width: 100%;
+}
+main .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 150px auto 150px auto;
+  width: 45%;
+}
+main .title .logo {
+  width: 100%;
+  cursor: pointer;
+}
+main .title #introMusic {
+  display: none;
+}
+main .title p {
+  font-size: 50px;
+  margin: 50px 0;
+  text-align: center;
+}
+main .title #buy {
+  font-size: 40px;
+  text-align: center;
+  margin: 100px 0;
+  padding: 200px 0;
+  text-decoration: none;
+  cursor: pointer;
+}
+main .title #buy:hover {
+  font-weight: bold;
+  color: #ce2029;
+}
+main #about {
+  width: 60%;
+  margin: 0 auto;
+  padding: 200px 0;
+}
+main #about p {
+  text-align: center;
+  font-size: 40px;
+}
+main #trailer {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 100px auto;
+  padding: 200px 0;
+}
+main #trailer a {
+  text-decoration: none;
+  display: none;
+}
+main #game-info {
+  width: 50%;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  overflow-x: auto;
+  align-items: center;
+}
+main #game-info a {
+  text-decoration: none;
+}
+main #game-info .tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  border: solid #363636 1px;
+  width: 360px;
+  height: 420px;
+  margin: 20px;
+  border-radius: 10px;
+  font-size: 40px;
+  font-weight: bold;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+main #game-info .tab:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+main #game-info .moons {
+  background-image: url("Images/moon.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+}
+main #game-info .moons p {
+  cursor: pointer;
+}
+main #game-info .bestiary {
+  background-image: url("Images/wildlife.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+}
+main #game-info .lore {
+  background-image: url("Images/lore.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+}
+main #game-info .gameplay {
+  background-image: url("Images/gameplay.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+}
+
+footer {
+  width: 100%;
+  text-align: right;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1024px) {
+  header {
+    padding: 5%;
+    height: 145px;
+  }
+  header h1 {
+    margin-top: 0;
+  }
+  header #menu {
+    display: block;
+  }
+  header nav ul {
+    width: 25%;
+    background-color: #363636;
+    position: absolute;
+    top: 145px;
+    right: 0;
+    text-align: right;
+  }
+  header nav ul li {
+    margin: 20px;
+  }
+  header nav ul li a {
+    font-size: 20px;
+  }
+  header #menu-list {
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  main .title {
+    width: 70%;
+    transition: 0.5s;
+  }
+  main .title p {
+    font-size: 40px;
+    transition: 0.5s;
+  }
+  main #about p {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 900px) {
+  header nav ul li a {
+    font-size: 20px;
+  }
+  main #about {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding: 20px;
+  }
+  main #about p {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 720px) {
+  header nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header nav ul li a {
+    font-size: 20px;
+  }
+  main .title {
+    margin-top: 50px;
+    width: 100%;
+  }
+  main #trailer {
+    width: 100%;
+    text-align: center;
+  }
+  main #trailer #video {
+    width: 100%;
+  }
+  main #game-info {
+    height: 300px;
+  }
+  main #game-info .tab {
+    width: 200px;
+    height: 240px;
+    border-radius: 5px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 625px) {
+  header h1 {
+    font-size: 20px;
+  }
+  header nav ul {
+    overflow: auto;
+    flex-direction: column;
+  }
+  main .title {
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+  main .title p {
+    font-size: 25px;
+  }
+  main .title #buy {
+    padding: 150px 0;
+    margin: 0px;
+    font-size: 26px;
+    transition: 0.5s;
+  }
+  main #about {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+  }
+  main #about p {
+    font-size: 18px;
+  }
+  main #trailer {
+    margin: 0;
+  }
+  main #trailer #video {
+    display: none;
+  }
+  main #trailer a {
+    font-size: 30px;
+    display: block;
+    cursor: pointer;
+  }
+  main #trailer a:hover {
+    font-weight: bold;
+  }
+  footer {
+    text-align: center;
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 480px) {
+  main #game-info {
+    width: 80%;
+  }
+}
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #363636;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}/*# sourceMappingURL=style.css.map */

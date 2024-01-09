@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'IBM 3270', Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    cursor: default;
+}
+
+@mixin centering {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin backgroundIMG () {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    background-color: #000000;
+    overflow: hidden;
+}
+
+// HEADER //
+
+header {
+    width: 100vw;
+    @include centering();
+    justify-content: space-between;
+    padding: 2% 5%;
+    height: 165px;
+    #menu {
+        height: 30px;
+        cursor: pointer;
+        display: none
+    }
+    nav {
+        @include centering();
+        ul li {
+            margin-top: -100px;
+            display: inline-block;
+            a {
+                text-decoration: none;
+                font-size: 26px;
+                margin: 0 10px;
+                cursor: pointer;
+                &:hover {
+                    font-weight: bold;
+                }
+            }
+            
+        }
+        #buy-menu {
+            font-weight: bold;
+            &:hover {
+                color: #ce2029;
+            }
+        }
+    }
+}
+
+//
+
+// MAIN //
+
+main {
+    width: 100%;
+    .title {
+        @include centering();
+        flex-direction: column;
+        margin: 150px auto 150px auto;
+        width: 45%;
+        .logo {
+            width: 100%;
+            cursor: pointer;
+        }
+        #introMusic {
+            display: none;
+        }
+        p {
+            font-size: 50px;
+            margin: 50px 0;
+            text-align: center;
+        }
+        #buy {
+            font-size: 40px;
+            text-align: center;
+            margin: 100px 0;
+            padding: 200px 0;
+            text-decoration: none;
+            cursor: pointer;
+            &:hover {
+                font-weight: bold;
+                color: #ce2029;
+            }
+        }
+    }
+    #about {
+        width: 60%;
+        margin: 0 auto;
+        padding: 200px 0;
+        p {
+            text-align: center;
+            font-size: 40px;
+        }
+    }
+    #trailer {
+        width: fit-content;
+        margin: 100px auto;
+        padding: 200px 0;
+        a {
+            text-decoration: none;
+            display: none;
+        }
+    }
+    #game-info {
+        width: 50%;
+        height: 500px;
+        margin: 0 auto;
+        display: flex;
+        overflow-x: auto;
+        align-items: center;
+        a {
+            text-decoration: none;
+            
+        }
+        .tab {      
+            @include centering();
+            flex: 0 0 auto;
+            border: solid #363636 1px;
+            width: 360px;
+            height: 420px;
+            margin: 20px;
+            border-radius: 10px;
+            font-size: 40px;
+            font-weight: bold;
+            transition: transform 0.3s ease-in-out;   
+            cursor: pointer;
+            &:hover {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+        }
+        .moons {
+            background-image: url('Images/moon.jpg');
+            @include backgroundIMG();
+            opacity: 0.7;
+            p {
+                cursor: pointer;
+            }
+            }
+        .bestiary {
+            background-image: url('Images/wildlife.png');
+            @include backgroundIMG();
+            opacity: 0.7;
+        }
+        .lore {
+            background-image: url('Images/lore.jpg');
+            @include backgroundIMG();
+            opacity: 0.7;
+        }
+        .gameplay {
+            background-image: url('Images/gameplay.jpg');
+            @include backgroundIMG();
+            opacity: 0.7;
+        }
+        
+    }
+}
+
+//
+
+// FOOTER //
+
+footer {
+    width: 100%;
+    text-align: right;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+//
+
+
+// MEDIA QUERIES //
+
+@media screen and (max-width: 1024px) {
+    header {
+        padding: 5%;
+        height: 145px;
+        h1 {
+            margin-top: 0;
+        }
+        #menu {
+            display: block;
+        }
+        nav ul {
+            width: 25%;
+            background-color: #363636;
+            position: absolute;
+            top: 145px;
+            right: 0;
+            text-align: right;
+            li {
+                margin: 20px;
+                a {
+                    font-size: 20px;
+                }
+            }
+        }
+        #menu-list {
+            overflow: hidden;
+            transition: 0.5s;
+        }
+    }
+    main {
+        .title {
+            width: 70%;
+            transition: 0.5s;
+            p {
+                font-size: 40px;
+                transition: 0.5s;
+            }
+        }
+        #about {
+            p {
+                font-size: 30px;
+            }
+    
+        }
+    }
+}
+@media screen and (max-width: 900px) {
+    header {
+        nav ul li a {
+            font-size: 20px;
+        }
+    }
+    main {
+        #about {
+            width: 100%;
+            padding-left: 50px;
+            padding-right: 50px;
+            padding: 20px;
+            p {
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    header {
+        nav {
+            ul {
+                width: 100%;
+                @include centering();
+                li a {  
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    main {
+        .title {
+            margin-top: 50px;
+            width: 100%;
+        }
+        #trailer {
+            width: 100%;
+            text-align: center;
+            #video {
+                width: 100%;
+            }
+        }
+        #game-info {
+            height: 300px;
+            .tab {
+                width: 200px;
+                height: 240px;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 625px) {
+    header {
+        h1 {
+            font-size: 20px;
+        }
+        nav ul {
+            overflow: auto;
+            flex-direction: column;
+        }
+    }
+    main {
+        .title {
+            margin-top: 30px;
+            margin-bottom: 0;
+            p {
+                font-size: 25px;
+            }
+            #buy {
+                padding: 150px 0;
+                margin: 0px;
+                font-size: 26px;
+                transition: 0.5s;
+            }
+        }
+        #about {
+            width: 100%;
+            margin: 0;
+            padding: 20px;
+            p {
+                font-size: 18px;
+            }
+        }
+        #trailer {
+            margin: 0;
+            #video {
+                display: none;
+            }
+            a {
+                font-size: 30px;
+                display: block;
+                cursor: pointer;
+                &:hover {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    footer {
+        text-align: center;
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        #game-info {
+            width: 80%;
+        }
+    }
+}
+
+
+// SCROLLBAR //
+
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #363636;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+//
