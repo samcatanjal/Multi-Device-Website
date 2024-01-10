@@ -19,7 +19,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 2% 5%;
-  height: 165px;
+  height: 135px;
 }
 header #menu {
   height: 30px;
@@ -37,18 +37,23 @@ header nav ul li {
 }
 header nav ul li a {
   text-decoration: none;
-  font-size: 26px;
+  font-size: 20px;
   margin: 0 10px;
   cursor: pointer;
+  padding: 8px 18px;
 }
 header nav ul li a:hover {
   font-weight: bold;
+  color: #000000;
+  background-color: #ed7117;
 }
 header nav #buy-menu {
   font-weight: bold;
+  background-color: #ce2029;
 }
 header nav #buy-menu:hover {
-  color: #ce2029;
+  color: #fff;
+  background-color: #ed7117;
 }
 
 main {
@@ -84,7 +89,7 @@ main .title #buy {
 }
 main .title #buy:hover {
   font-weight: bold;
-  color: #ce2029;
+  color: #ed7117;
 }
 main #about {
   width: 60%;
@@ -124,7 +129,7 @@ main #game-info .tab {
   border: solid #363636 1px;
   width: 360px;
   height: 420px;
-  margin: 20px;
+  margin: 20px 15px;
   border-radius: 10px;
   font-size: 40px;
   font-weight: bold;
@@ -238,7 +243,7 @@ footer {
     align-items: center;
   }
   header nav ul li a {
-    font-size: 20px;
+    font-size: 16px;
   }
   main .title {
     margin-top: 50px;
