@@ -7,13 +7,13 @@
     cursor: default;
 }
 
-@mixin centering {
+@mixin centering() {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-@mixin backgroundIMG () {
+@mixin backgroundIMG() {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -204,7 +204,7 @@ footer {
             display: block;
         }
         nav ul {
-            width: 25%;
+            width: 30%;
             background-color: #363636;
             position: absolute;
             top: 145px;
@@ -243,6 +243,7 @@ footer {
     header {
         nav ul li a {
             font-size: 20px;
+            width: 100%;
         }
     }
     main {
